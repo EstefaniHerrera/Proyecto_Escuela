@@ -19,5 +19,7 @@ class DatabaseSeeder extends Seeder
             ProfesorSeeder::class,
             AlumnoSeeder::class
         ]);
+        
+        \App\Models\GradoProfesor::factory(24)->create();
     }
 }

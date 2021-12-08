@@ -21,8 +21,6 @@ class CreateProfesorsTable extends Migration
             $table->string('Telefono');
             $table->string('CorreoElectronico');
             $table->float('Sueldo');
-            $table->unsignedBigInteger('grado_id');
-            $table->foreign('grado_id')->references('id')->on('grados');
             $table->timestamps();
         });
     }

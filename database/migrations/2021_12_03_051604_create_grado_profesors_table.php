@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGradoProfesorTable extends Migration
+class CreateGradoProfesorsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateGradoProfesorTable extends Migration
      */
     public function up()
     {
-        Schema::create('grado_profesor', function (Blueprint $table) {
+        Schema::create('grado_profesors', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('grado_id');
             $table->foreign('grado_id')->references('id')->on('grados');
@@ -30,6 +30,6 @@ class CreateGradoProfesorTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('grado_profesor');
+        Schema::dropIfExists('grado_profesors');
     }
 }

@@ -21,8 +21,7 @@ class ProfesorFactory extends Factory
             'SegundoApellido'=>$this->faker->lastName(),
             'Telefono'=>$this->faker->phoneNumber(),
             'CorreoElectronico'=>$this->faker->unique()->Email(),
-            'Sueldo'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 8000.00, $max = 25000.99),
-            'grado_id'=>$this->faker->numberBetween(1, 24)
+            'Sueldo'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 8000.00, $max = 25000.99)
         ];
     }
 }

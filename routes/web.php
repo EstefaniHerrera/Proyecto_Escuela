@@ -82,3 +82,12 @@ Route::put('/profesors/{id}/editar', [ProfesorController::class, 'update'])
 //ruta para borrar datos
 Route::delete('/profesors/{id}/borrar', [ProfesorController::class, 'destroy'])
 ->name('profesor.borrar')->where('id', '[0-9]+');
+
+/* *******************************************GradoProfesor*************************************/
+//ruta para crear
+Route::get('/gradoprofesors/crear', [GradoProfesorController::class, 'crear'])
+->name('gradoprofesor.crear');
+
+//ruta para postear
+Route::post('/gradoprofesors/crear', [GradoProfesorController::class, 'store'])
+->name('gradoprofesor.guardar');

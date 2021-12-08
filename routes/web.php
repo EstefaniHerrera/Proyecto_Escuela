@@ -13,11 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
-
-<<<<<<< HEAD
 
 /* ********************************************** Grado *********************************/
 //ruta para leer
@@ -51,7 +51,8 @@ Route::put('/grados/{id}/editar', [GradoController::class, 'update'])
 //ruta para borrar datos
 Route::delete('/grados/{id}/borrar', [GradoController::class, 'destroy'])
 ->name('grado.borrar')->where('id', '[0-9]+');
-=======
+
+
 /* ********************************************** Profesor *********************************/
 //ruta para leer
 Route::get('/profesors', [ProfesorController::class, 'index'])
@@ -85,4 +86,3 @@ Route::put('/profesors/{id}/editar', [ProfesorController::class, 'update'])
 //ruta para borrar datos
 Route::delete('/profesors/{id}/borrar', [ProfesorController::class, 'destroy'])
 ->name('profesor.borrar')->where('id', '[0-9]+');
->>>>>>> 9b7cb15a0bbc2d41e21ef85ff8014a597806fc6b
